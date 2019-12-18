@@ -1,0 +1,12 @@
+sci_calc: Add.o Multiply.o Division.o Subtract.o Central_prog.o
+	gcc -o sci_calc Add.o Multiply.o Division.o Subtract.o Central_prog.o
+Add.o : Add.c prototypes.h
+	gcc -c Add.c
+Multiply.o : Multiply.c prototypes.h
+	gcc -c Multiply.c
+Division.o : Division.c prototypes.h
+	gcc -c Division.c
+Subtract.o : Add.c prototypes.h
+	gcc -c Subtract.c
+Central_prog.o : Central_prog.c prototypes.h
+	gcc -c Central_prog.c
